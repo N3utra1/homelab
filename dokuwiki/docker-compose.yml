@@ -1,0 +1,10 @@
+services:
+  dokuwiki:
+    image: dokuwiki/dokuwiki:stable
+    restart: unless-stopped
+    ports:
+      - "9090:8080"
+    environment:
+      PHP_TIMEZONE: Europe/London
+    volumes:
+      - /opt/dokuwiki/storage:/storage
